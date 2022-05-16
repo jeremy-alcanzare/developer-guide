@@ -2,9 +2,9 @@
 
 ## Intro
 
-Single node Openshift (SNO) features the smallest cluster size that can deployed by OpenShift. Before its introduction in OpenShift 4.9, the smallest cluster size that coud be deployed was the three node cluster. With single node OpenShift, control and worker nodes are deployed on a single cluster. This makes it even easier to deploy than a three node cluster, as far fewer resources are needed for delpoyment.
+Single node Openshift (SNO) features the smallest cluster size that can deployed by OpenShift. Before its introduction in OpenShift 4.9, the smallest cluster size that coud be deployed was the three node cluster. With single node OpenShift, a single node is used, which functions both a master and a worker node. This makes it even easier to deploy than a three node cluster, as far fewer resources are needed for delpoyment.
 
-This guide will walk you through the process of provisioning a Single Node OpenShift Cluster on Linux KVM using the OpenShift Assisted Installer API. We will use Ansible playbooks to automate discrete parts of the process, and AWX will then be used to orchestrate the deployment of those Ansible playbooks. This will allow us to configure and provision a Single Node OpenShift Cluster just by running a single AWX orchestration.
+This guide will walk you through the process of provisioning a Single Node OpenShift Cluster on Linux KVM using the OpenShift Assisted Installer API. We will use Ansible playbooks to automate discrete parts of the process.
 
 Ansible is an IT automation service that allows us to define tasks, which can be comprised of shell commands, HTTP requests, or other tasks. Tasks can accept paramters through variables, and allow for conditional logic. We can easily define each discrete step in the process of provisioning a single node OpenShift cluster as a task, which then can be saved and called as many times as necessary.
 
@@ -13,6 +13,8 @@ More details about Ansible can be found here: https://github.com/ansible/ansible
 The OpenShift Assisted Installer allows for easier provisioning of OpenShift clusters onto bare metal machines. The Assisted Installer allows bootstrapping to be done on one of the nodes of your OpenShift cluster, meaning a separate bootstrapping machine is not required. It also provides a user-friendly API that does not require an in-depth knowledge of Openshift to use. 
 
 More details about the OpenShift Assisted Installer can be found here: https://github.com/openshift/assisted-installer
+
+Red Hat offers a no-cost Red Hat Enterprise Linux (RHEL) Developer Subscription which may be used for this guide. More details can be found here: https://developers.redhat.com/articles/faqs-no-cost-red-hat-enterprise-linux#getting_your_no_cost_subscription
 
 # Spin up a Single Node OpenShift Cluster on IBM Cloud
 
