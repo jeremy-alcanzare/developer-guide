@@ -8,7 +8,7 @@ To add a new asset to the Industry Toolkit, create a new branch and add your mar
 
 This repository has been configured to build and publish the changes automatically via travis-ci. There are two builds currently configured:
 
-- `main` branch is automatically published to the `gh-pages` branch in this repository which is visible here - https://cloudnativetoolkit.dev
+- `main` branch is automatically published to the `gh-pages` branch in this repository which is visible on the Industry Toolkit website.
 
 **Note:** There is a time delay between when deploy process completes and when the
 content is available on the published site.

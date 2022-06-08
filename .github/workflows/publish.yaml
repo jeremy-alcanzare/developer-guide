@@ -11,21 +11,21 @@ jobs:
 
     env:
       NODE_VERSION: 12.x
-      TITLE: Cloud-Native Toolkit
+      TITLE: Industry Toolkit
       ANALYTICS_ID: ""
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: generate site
         uses: ./.github/actions/
-      - name: Set CNAME
-        run: sudo chmod 777 ./public/CNAME && echo "cloudnativetoolkit.dev" > ./public/CNAME
-        
+ 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./public
+
 
   release:
     needs:
@@ -34,7 +34,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Drafts your next Release notes as Pull Requests are merged into "main"
       - name: Create release
@@ -47,3 +47,5 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+

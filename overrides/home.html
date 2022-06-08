@@ -3,13 +3,6 @@
 
 <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
 
-<!-- Announcement bar -->
-{% block announce %}
-  <a href="https://cloud-native-toolkit.github.io/dev-guide">
-    Previous version of site can be found here
-  </a>
-{% endblock %}
-
 <!-- Tabs -->
 {% block tabs %}{% endblock %}
 
@@ -25,7 +18,7 @@
         <section>
           <div class=home-hero>
             <div class=home-hero-text>
-              <h1>Industry Toolkit</h1>
+              <h1>{{ config.site_name }}</h1>
             </div>
             <div class=home-hero-image>
             </div>
@@ -35,12 +28,10 @@
           <div class=home-description>
             <div class='row'>
               <div class='column'>
-                Industry Toolkit
+                {{ config.site_name }}
               </div>
               <div class='column'>
-                The Industry Toolkit is a collection of assets
-                that enable application development and support teams to deliver business value
-                to Industry 4.0 partners and clients.
+                {{ config.site_description }}
               </div>
             </div>
           </div>

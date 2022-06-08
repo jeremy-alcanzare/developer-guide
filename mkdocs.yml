@@ -1,13 +1,14 @@
 site_name: Industry Toolkit
 site_description: >-
-  The Industry 4.0 Toolkit is a collection of guides and tutorials that walk through the set up and installation process for various software assets related to Indutsry 4.0 Projects.
-site_url: https://jeremy-alcanzare.github.io/developer-guide/
-site_author: IBM Build Labs
+  The Industry Toolkit is a collection of assets that enable application development and support teams to deliver business value to Industry 4.0 partners and clients. The toolkit includes assets like Ansible artifacts, code patterns, tutorials, reference architectures and best practices.
+site_url: https://jeremy-alcanzare.github.io/industry-toolkit/
+site_author: IBM Build Labs Industry
 repo_name: ""
-repo_url: https://github.com/jeremy-alcanzare/developer-guide
+repo_url: https://github.com/jeremy-alcanzare/industry-toolkit
 docs_dir: docs
 site_dir: public
 edit_uri: edit/main/docs
+
 theme:
     name: material
     logo: images/cloudnativetoolkit.png
@@ -57,5 +58,8 @@ nav:
   - Home: index.md
   - Overview:
     - What is the Industry Toolkit: overview/overview.md
+  - Use Cases:
+    - Edge Data Gateway: use-cases/edge-data-gateway.md
   - Guides:
-    - ODI Pipeline: guides/odi-pipeline-tutorial.md 
+    - ODI Pipeline: guides/odi-pipeline-tutorial.md
+    - Install SNO on KVM: guides/sno-kvm-vsi-vpc-ibmcloud.md
